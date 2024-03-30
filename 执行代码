@@ -1,0 +1,11 @@
+python synthesize.py --text "One of them went into his cell just at dinner-time;" --model naive --restore_step 200000 --mode single --dataset LJSpeech
+python synthesize.py --text "国际田联赛在耐力赛项目存在极度纵容兴奋剂存在的可能" --speaker_id SSB0073 --model naive --restore_step 100000 --mode single --dataset AISHELL3
+
+
+
+multiple:
+普通话：
+python synthesize_multiple.py --source sentences-ai.txt --model naive --restore_step 200000 --mode multiple --dataset AISHELL3
+英语：
+python synthesize_multiple.py --source sentences-lj.txt --model shallow --restore_step 400000 --mode multiple --dataset LJSpeech
+python synthesize_multiple.py --source sentences-lj.txt --model naive --restore_step 1100000 --mode multiple --dataset LJSpeech
